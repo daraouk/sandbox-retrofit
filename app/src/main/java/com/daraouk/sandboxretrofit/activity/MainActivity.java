@@ -34,7 +34,7 @@ public class MainActivity extends Activity {
         GetEmployeeDataService service = RetrofitInstance.getRetrofitInstance().create(GetEmployeeDataService.class);
 
         /*Call the method with parameter in the interface to get the employee data*/
-        Call<EmployeeList> call = service.getEmployeeData(100);
+        Call<EmployeeList> call = service.getEmployeeData();
 
         /*Log the URL called*/
         Log.wtf("URL Called", call.request().url() + "");
